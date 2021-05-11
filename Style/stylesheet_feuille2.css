@@ -1,0 +1,869 @@
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./Police/Shrikhand/Shrikhand-Regular.otf");
+    src: url('./Police/Shrikhand/shrikhand-v6-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./Police/Shrikhand/shrikhand-v6-latin-regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+         url('./Police/Shrikhand/shrikhand-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./Police/Shrikhand/shrikhand-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./Police/Shrikhand/shrikhand-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./Police/Shrikhand/shrikhand-v6-latin-regular.svg') format('svg'); /* Legacy iOS */
+    font-family: 'Roboto-Regular';
+    src: url("./Police/Roboto/Roboto-Regular.ttf");
+    font-family: 'Roboto-Light';
+    src: url("./Police/Roboto/Roboto-Light.ttf");  
+}
+     /*body*/
+
+     body{
+        font-family: 'Roboto';
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /*header*/
+
+    header{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0;    
+    }
+    .logo{
+        width: 70%;
+        margin-top: 0%;
+        margin-bottom: 1%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .arrow{
+        width: 10%;
+        display: flex;
+        text-decoration: none;
+        color: black;
+        padding-left: 5%;
+        margin-top: 5%;
+    }
+    .imagelogo {
+        font-family: 'Shrikhand';
+        width: 63%;
+        height: auto;
+        background-color: white;
+        display: flex; 
+        margin-right: 0%;
+        margin-top: 3%;
+        margin-bottom: 2%;
+    }
+   
+    /*Image du restaurant*/
+
+   
+    img{
+        width: 100%;
+        height: 250px; 
+        object-fit: cover;
+        margin-bottom: -15%;
+    }
+
+    /*Main, Article*/
+
+    main{
+        width: auto;
+        background-color: #F2F2F2;
+        position: relative;
+        z-index: 1;
+        border-radius: 40px 40px 0px 0px;
+        padding-top: 40px;
+    }
+    article{
+        width: auto;
+        background-color: #F2F2F2;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .titre{
+        border-radius: 50px 50px 0px 0px;
+        width: 100%;
+        height: auto;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        font-family: 'Shrikhand'; 
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        margin-left: 3%;
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    .btn-heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        border: transparent;
+        background-color: transparent;
+        position: relative;
+        margin-right: 5%;
+        padding-bottom: 8%;
+    }
+    .btn-heart .gradient, .btn-heart .nograd {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-heart .gradient {
+        background-color: transparent;
+        color: black;
+    }
+    .btn-heart .nograd {  
+        z-index: -1;
+        width: 100%;
+        height: 0;
+    }
+    .btn-heart:hover .gradient {
+        color: transparent;
+        z-index: -1;
+      }
+    .btn-heart:hover .nograd {
+        z-index: 1;
+        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: height 0.9s linear;
+        height: 100%;
+    }
+    .btn-heart:active .gradient {
+        color: transparent;
+        z-index: -1;
+    }
+    .btn-heart:active .nograd {
+        z-index: 1;
+        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: height 0.9s linear;
+        height: 100%;
+    }
+    
+    /*Menus*/
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 3%;
+    }
+    .mets, .mets1, .mets2{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 5%; 
+    }
+    .mets{
+        animation: mets 500ms 500ms both;
+    }
+    .mets1{
+        animation: mets1 700ms 700ms both;
+   
+    } 
+    .mets2{
+        animation: mets2 900ms 900ms both;
+    }
+@keyframes mets{
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    17% {
+        transform: scaleX(0.81);  
+        opacity: 0.8;
+    }
+    24% {
+        transform: scaleX(1);
+        animation-timing-function: linear;
+        opacity: 1;
+    }
+    46% {
+        transform: scaleX(1);
+    }
+    68%{
+        transform: scaleX(1);
+    }
+    85% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1);
+}
+}
+@keyframes mets1{
+    0% {
+        transform: scaleX(0);
+      
+    }
+    17% {
+        transform: scaleX(0);
+    }
+    24% {
+        transform: scaleX(0);
+    }
+    46% {
+        transform: scaleX(0.81);
+        opacity: 0.8;
+    }
+    68%{
+        transform: scaleX(1);
+        animation-timing-function: linear;
+        opacity: 1;
+    }
+    85% {
+        transform: scaleX(1);  
+    }
+    100% {
+        transform: scaleX(1);
+}
+}
+@keyframes mets2{
+    0% {
+        transform: scaleX(0);
+        
+    }
+    17% {
+        transform: scaleX(0);
+    }
+    24% {
+        transform: scaleX(0);
+       
+    }
+    46% {
+        transform: scaleX(0);
+    }
+    68%{
+        transform: scaleX(0);
+    }
+    85% {
+        transform: scaleX(0.81);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(1);
+        animation-timing-function: linear;
+        opacity: 1;
+    }
+}
+    h2{ 
+        font-family: 'Roboto-Light';
+        font-size: 1em;
+        font-weight: inherit;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        margin-left: 3%;
+    }
+    .trait_dessous{
+        width: 40px;
+        margin-left: 3%;
+        margin-bottom: 3%;
+    }
+    hr{
+        height: 2px;
+        border-color: transparent;
+        background:#9bbee0; 
+        margin-top: 2%;
+    }
+    .card{
+        border: 1px solid #e5e6e7;
+        border-color: #F2F2F2;
+        border-radius: 15px;
+        background: white;
+        box-shadow: 0px 5px 5px #e0e3e6;
+        width: 94%;
+        height: 70px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .tiles{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .repas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-bottom: 0;
+    }
+    .first{
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0; 
+    }
+    .desc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-top: 1%;
+        margin: 0; 
+    }
+    .second{
+        height: 70%;
+        font-family: 'Roboto-Light';
+        font-size: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        margin: 0;
+    }
+    .price{
+        width: 15%;
+        color: black;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: row;
+        margin: 0%;
+    }   
+    .check{
+        height: 102%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 15px 15px 0px;
+        color:#fff;
+        background-color:  rgb(160, 228, 224);;
+        overflow: hidden;
+        margin: 0;
+    }
+    .fas.fa-check{
+        color: #8ee2ff;
+        border: 1px solid rgba(255, 255, 255, 0.952);
+        background-color: white;
+        border-radius: 50%;
+        width: 25%;
+        padding: 3%;
+        margin: auto;
+    }
+    .tiles:hover .check .fas {
+        transition: transform 0.3s linear;
+        transform: rotate(360deg);
+    }
+   
+    .tiles:hover .check{
+        transition: width 0.3s linear;
+        width: 25%;
+        cursor: pointer;
+    }
+    .tiles:not(:hover) .check{
+        transition: width 0.3s linear;
+        width: 0%;
+    }  
+    .tiles:active.check .fas {
+        transition: transform 0.3s linear;
+        transform: rotate(360deg);
+    }
+    .tiles:active .check{
+        transition: width 0.3s linear;
+        width: 25%;
+        cursor: pointer;
+    }
+    .tiles:not(:active) .check{
+        transition: width 0.3s linear;
+        width: 0%;
+    } 
+
+    /*Bouton*/
+
+    .btn1{
+        width: 50%;
+        background: linear-gradient(#FF79DA , #9356DC);
+        box-shadow: 4px 4px 6px #c7cff5;
+        border-radius: 30px;
+        padding: 5%;
+        color: #fff;
+        font-size: 1.1em;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+    .btn1:hover{
+        background: linear-gradient(#f5bce5 , #b28fdd);
+        box-shadow: 0px 5px 12px 3px #657cf0;
+    }
+
+   /*Footer*/
+
+    footer{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding-bottom: 10%;
+        background-color: black;
+        margin-top: -5%;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .footerlogo{
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 8%;
+        padding-bottom: 5%;
+    }
+    .picturelogo{
+        width: 35%;
+    }
+    .elements{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+    }
+    .element{
+        color: white;
+        font-size: 1.1em;
+        margin-left: 5%;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        text-decoration: none;
+    }
+    .element i{
+        margin-right: 3%;
+        font-size: 1em;
+    }
+    .fa-utensils:before{
+        font-size: 0.8em;
+    }
+    .fa-hands-helping:before{
+        font-size: small;
+    }
+
+    @media (min-width: 376px) and (max-width: 768px){
+
+        header{
+            width: 100%;
+        }
+        .logo{
+            width: 65%;
+        }
+        .arrow{
+            padding-bottom: 2%;
+        }
+        .imagelogo{
+            width: 40%;
+        }
+        img{
+            margin-bottom: -10%;
+        }
+        main{
+            z-index: 0;   
+        }
+        article{
+            width: 100%;
+        }
+        .titre{
+            width: auto;
+            height: 40px;
+            padding-top: 3%;
+        }
+        .btn-heart {
+            margin-top: 0%;
+        }
+        .mets  .mets1 .mets2{
+            padding-bottom: 3%;
+        }
+        .card{
+            width: 94%;
+            margin-bottom: 3%;  
+        }
+        .first{
+            padding-top: 0%;
+        }
+        .tiles:hover .check{
+            width: 80px;
+        }
+        .tiles:active .check{
+            width: 80px;
+        }
+        .btn1{
+            padding: 2%;
+            font-size: 1em;
+            margin-top: 5%;
+            margin-bottom: 15%;
+            margin-left: auto;
+            margin-right: auto; 
+            text-align: center;
+            z-index: 1
+        }
+        footer{
+            padding-bottom: 5%;
+            z-index: 1;
+        }
+        .footerlogo{
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        .picturelogo{
+            margin-left: 0%;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px){
+
+        body{
+            width: auto;
+        }
+        .photo{
+            width: 100%;
+            height: 250px;
+            margin-bottom: -5%;
+        }
+        .picture{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+        }
+        .logo{
+            width: 60%;
+        }
+        .arrow{
+            padding-bottom: 1%;
+        }
+        .imagelogo{
+            width: 40%;
+        }
+        img{
+            margin-bottom: -5%;
+        }
+        main{
+            width: 100%;
+            background-color: #F2F2F2;
+            position:relative;
+            z-index: 0;
+            border-radius: 0px 0px 0px 0px;
+            padding-top: 0px;
+            margin: 0%;
+        }
+        article{
+            width: 100%;
+        }
+        .titre{
+            width: 100%;
+            height: 40px;
+            margin-top: 5%;
+        }
+        h1{
+            margin-bottom: 0;
+        }
+        .btn-heart {
+            padding-top: 10%;
+        }
+        .mets{
+            padding-bottom: 3%;
+        }
+        .card{
+            margin-bottom: 3%;  
+        }
+        .repas{
+            margin-top: 1%;
+            padding-top: 0%;
+        }
+        .first{
+            padding-top: 0%;
+        }
+        .tiles:hover .check{
+            width: 85px;
+        }
+        .tiles:active .check{
+            width: 85px;
+        }
+        .btn1{
+            width: 25%;
+            padding: 2%;
+            font-size: 1.1em;
+            margin-top: 0%;
+            margin-bottom: 14%;
+            margin-left: auto;
+            margin-right: auto;  
+            text-align: center;
+            z-index: 1
+        }
+        footer{
+            padding-bottom: 1%;
+            z-index: 1;
+        }
+        .footerlogo{
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        .picturelogo{
+            margin-left: -5%;
+        }
+        .element{
+            margin-bottom: 1%;
+        }
+    }
+    @media (min-width: 1025px){
+    /*body*/
+
+    body{
+        font-family: 'Roboto';
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*header*/
+
+    header{
+        width: auto;
+        padding-bottom: 0;
+    }
+    .titre{
+        margin-top: 3%;
+    }
+   
+    .logo{
+        width: 55%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+    .arrow{
+        display: flex;
+        text-decoration: none;
+        color: black;
+        padding-top: 1%;
+    }
+    .imagelogo{
+        width: 40%;
+    }
+
+    /*Image du restaurant*/
+
+    img{
+        margin-bottom: -2%;
+    }
+
+     /* Main, Article */
+
+     main{
+        width: 100%;
+        background-color: #F2F2F2;
+        position: relative;
+        z-index: 1;
+        border-radius: 10px 10px 10px 10px;
+        padding-top: 0px;
+        margin: 0%;
+    }
+    article{
+        width: 100%;
+        height: auto;
+        padding-left: 0%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column; 
+    }
+    .titre{
+        width: 100%;
+        height: 40px;
+    }
+    h1{
+        font-size: 1.8rem;
+        margin-left: 3%; 
+        margin-bottom: 0;
+        padding-top: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .btn-heart {
+        margin-right: 5%;
+        padding-bottom: 0%;
+    }  
+   
+    /*Menus*/
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        width: 96%;
+        height: auto;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 0;
+    }
+    .mets, .mets1, .mets2{
+        width: 33%;
+        padding-bottom: 0%; 
+    }
+    h2{
+        font-size: 1em;
+        font-weight: inherit;
+        margin-left: 3%;
+        margin-bottom: 1%;
+    }
+    .trait_dessous{
+        width: 40px;
+        margin-left: 3%;
+        margin-bottom: 0%;
+    }
+    hr{
+        height: 2px;
+        border-color: transparent;
+        background:#8ee2ff; 
+        margin-top: 1%;
+    }
+    div.card{
+        border-radius: 20px;
+        box-shadow: 0px 5px 5px #e0e3e6;
+        width: 94%;
+        height: 70px;
+        margin-bottom: 3%;
+        display: flex;
+        flex-direction: column;    
+    }
+
+    .repas{
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .first{
+        font-weight: bold;
+        margin: 0;
+        padding-top: 0%;
+        padding-bottom: 0%;    
+    }
+    .desc{
+       font-size: 1rem; 
+       padding-top: 0%;
+    }
+    .second{
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index:1;
+        margin-top: 0%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .price{
+        display: flex;
+        margin: 0;
+    }
+    .check{
+        margin:0;
+    }
+    .tiles:hover .check{
+        width: 80px;
+    }
+    .tiles:active .check{
+        width: 80px;
+    }
+
+    /*Bouton*/
+
+    .btn1{
+        width: 25%;
+        border-radius: 30px;
+        padding: 2%;
+        font-size: 1.1em;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: auto;
+        margin-right: auto; 
+        text-align: center;
+        z-index: 1
+    }
+
+    /*Footer*/
+
+    footer{
+        width: 100%;
+        height: auto;
+        margin-top: 3%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+    }
+    .footerlogo{
+        width: 80%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 3%;
+    }
+    .picturelogo{
+        background: #000;
+        width: 15%;
+    }
+    .elements{
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+    .element{
+        width: 100%;
+        color: white;
+        font-size: 1em;
+        margin-left: 3%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .element i{
+        margin-right: 3%;
+        font-size: 1em;
+    }
+    .fa-utensils:before{
+        font-size: 0.8em;
+    }
+    .fa-hands-helping:before{
+        font-size: small;
+    } 
+}
+
+    
+    
